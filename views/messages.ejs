@@ -1,0 +1,17 @@
+<h1>Messages</h1>
+<% if (messages.length) {
+  %><ol>
+    <% messages.forEach((message) => {
+      %>
+        <li><%= message %></li>
+      <%
+    }) %>
+  </ol><%
+} %>
+
+
+<a href="/postmessage">Post Message</a>
+<br>
+<form action="/logout?_method=DELETE" method="POST">
+  <button type="submit">Log Out</button>
+</form>
